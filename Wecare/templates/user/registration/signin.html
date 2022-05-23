@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>wecare signIn</title>
+</head>
+  <style>
+        .mydiv{
+            background-image:url("{% static 'images/loginbg.jpg'%}");
+
+
+            }
+
+
+        .div {
+           background-color:lightgrey;
+           width:300px;
+           border:8px solid black;
+           padding:30px;
+           margin-left:540px;
+
+              }
+        h2{
+           color:white;
+           }
+
+        table{
+           width:40%;
+           border: 1px solid;
+           bottom:20;
+           border-color:white;
+
+              }
+
+        .center{
+           margin-left: auto;
+           margin-right: auto;
+
+               }
+        .td{
+           text-align:center;
+           }
+
+
+        .copy{
+               text-align:center;
+               bottom:0;
+               }
+
+
+  </style>
+
+<body class="mydiv" >
+
+<h2><center><u>Sign In</u></center></h2>
+<div align="center">
+<form method="post" action="log">
+    {% csrf_token %}
+    <table class="center">
+        <tr>
+            <td><label><h2>Username:</h2></label></td>
+        <td><input type="text" name="username" maxlength="20"></td>
+        </tr>
+           <tr>
+        <td><label><h2>Password:</h2></label></td>
+        <td><input type="text" name="password" maxlength="8"></td>
+        </tr>
+    </table><br><br>
+    <input type="submit" value="login">
+    <h2>Sign Up</h2>        <h2><a href="user/registration/signup.html"> Forgot Password?</a></h2>
+</form>
+    </div>
+
+  <p class="copy">&copy;wecare2022</p>
+</body>
+</html>

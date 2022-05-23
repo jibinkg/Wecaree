@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>wecare signup form</title>
+    <style>
+        .mydiv{
+            background-image:url("{% static 'images/wecarebg.jpg'%}");
+            height:400px;
+            width:100%;
+            background-repeat:no-repeat;
+            background-size:auto;
+            display:flex;
+            }
+
+        .div2{
+              background-color:lightblue;
+              height:500px;
+              width:100%;
+              }
+
+
+
+
+        .copy{
+
+               text-align:center;
+               bottom:0;
+
+               }
+
+        body{
+              border-style:solid;
+              border-color:ash;
+              }
+
+        h2.mode{
+                 font-size:50px;
+                 padding:130px;
+                 color:'red'
+
+
+                }
+
+
+        .div{
+           text-align: center;
+           padding: 80px;
+           height: 300px;
+           width: 500px;
+           color: black;
+
+           }
+
+
+
+        .header{
+           padding: 110px;
+           text-align: center;
+           color: white;
+           }
+
+
+
+
+        input[type=text], select {
+           width: 100%;
+           padding: 12px 20px;
+           margin: 8px 0;
+           display: inline-block;
+           border: 1px solid #ccc;
+           border-radius: 4px;
+           box-sizing: border-box;
+           }
+
+        input[type=submit] {
+           width: 100%;
+           background-color: #4CAF50;
+           color: white;
+           padding: 14px 20px;
+           margin: 8px 0;
+           border: none;
+           border-radius: 4px;
+           cursor: pointer;
+           }
+
+        input[type=submit]:hover {
+           background-color: #45a049;
+           }
+
+        .div3 {
+           border-radius: 5px;
+           background-color: #f2f2f2;
+           padding: 20px;
+           }
+         }
+
+    </style>
+</head>
+<body>
+<div class="mydiv">
+    <div class="header">
+    <h2 style="font-size: 56px;">WE CARE</h2>
+    <pre > T H E  P E R F E C T  H E L P I N G  H A N D S</pre>
+        </div>
+</div>
+<h4><b>Our Signup Form</b></h4>
+
+<div class="div2">
+             <div class="div3" >
+                  <label for="name"> Name:</label>
+                  <input type="text" id="name" name="name" placeholder="Enter name">
+
+                  <label for="age">Age:</label>
+                  <input type="text" id="age" name="age" placeholder="Enter age">
+
+                  <label for="gender">Gender</label>
+                  <select id="gender" name="gender">
+                  <option value="male">Male</option>
+                  <option value="female">Female</option>
+                  <option value="others">Others</option>
+                  </select>
+
+                 <label for="add">Address:</label>
+                  <input type="text" id="add" name="add" placeholder="Enter address">
+
+                 <label for="place">Place:</label>
+                  <input type="text" id="place" name="place" placeholder="Enter place">
+
+
+                 <label for="contact">Contact:</label>
+                  <input type="text" id="contact" name="contact" placeholder="Enter contact no.">
+
+                 <label for="username">Username:</label>
+                  <input type="text" id="username" name="username" placeholder="Enter username">
+
+                 <label for="password">Password:</label>
+                  <input type="text" id="password" name="password" placeholder="Enter password">
+
+
+                  <input type="submit" value="Done">
+             </div>
+
+
+
+    <p class="copy">&copy;wecare2022</p>
+
+</div>
+
+</body>
+</html>
