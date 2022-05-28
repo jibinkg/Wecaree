@@ -93,22 +93,34 @@
 
 <div class="div2">
              <div class="div" >
+                 <form method="post" action="sdp">
+                     {% csrf_token %}
                   <label for="Hospital"><b>Select Hospital:</b></label>
                    <select id="Hospital" name="Hospital" >
-                   <option value="nothing">Hospital names</option>
-                   <option value="sunrise">SunRise hospital</option>
-                       <option value="amala">Amala hospital</option>
-                     <option value="elite">Elite hospital</option>
-                     <option value="jubilie">Jubilie hospital</option>
-                     <option value="westfort">West fort hospital</option>
+                       <option value="nothing">Hospital names</option>
+                       {% for i in data %}
+                     <option value="nothing" name="hos">{{i.Name}}</option>
+                       {% endfor %}
+<!--                   <option value="sunrise">SunRise hospital</option>-->
+<!--                       <option value="amala">Amala hospital</option>-->
+<!--                     <option value="elite">Elite hospital</option>-->
+<!--                     <option value="jubilie">Jubilie hospital</option>-->
+<!--                     <option value="westfort">West fort hospital</option>-->
                     </select>
+
+                     <INPUT name="Hname" type="text" hidden>
+                     <input type="submit" value="ok">
+                 </form>
              </div>
 
 
-    <a href="signin.html"><h3 class="L">Sign In</h3> </a>
-    <a href="signout.html"><h3 class="R">Sign out</h3> </a>
+    <a href="registration/signin.html"><h3 class="R">Log out</h3> </a>
 
-    <p class="copy">&copy;wecare2022</p>
+
+
+    <p class="copy">{{i.Name}}&copy;wecare2022</p>
+
+
 
 </div>
 
