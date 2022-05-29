@@ -11,7 +11,7 @@ def home(re):
     return render(re,'user/mainpage.html', {'data':s})
 
 def sundepart(re):
-    x=re.POST.get('hos')
+    x=re.POST.get('name')
     print(x,'xxxxxxxxxxx')
     return render(re,'user/sunrisedepartments.html')
 
