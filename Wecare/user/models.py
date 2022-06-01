@@ -9,7 +9,7 @@ class bookingform(models.Model):
     Place = models.CharField(max_length=25)
     District = models.CharField(max_length=15)
     State = models.CharField(max_length=20)
-    ContactNo = models.IntegerField()
+    ContactNo = models.CharField(max_length=10)
     Paymentmethod = models.CharField(max_length=10)
 
 class student(models.Model):
@@ -19,3 +19,20 @@ class student(models.Model):
 class login(models.Model):
    username = models.CharField(max_length=30)
    password = models.CharField(max_length=10)
+
+class hospitalreg(models.Model):
+    Hid=models.IntegerField(primary_key=True)
+    Hname=models.CharField(max_length=30)
+    Place=models.CharField(max_length=25)
+    Address=models.CharField(max_length=50)
+    email=models.EmailField()
+    Contact=models.CharField(max_length=10)
+
+class doctorreg(models.Model):
+    Did=models.IntegerField(primary_key=True)
+    Dname=models.CharField(max_length=20)
+    Hid=models.IntegerField()
+    Department=models.CharField(max_length=20)
+    Qualification=models.CharField(max_length=10)
+    Time=models.DateTimeField()
+

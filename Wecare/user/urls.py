@@ -9,8 +9,6 @@ urlpatterns = [
     path('rcp',views.reciept),
     path('log', views.login),
     path('sup', views.signup),
-    path('adp', views.amaladepart),
-    path('edp', views.elitedepart),
-    path('jdp', views.jubiliedepart),
-    path('wdp', views.westfortdepart),
+
+
 ]
