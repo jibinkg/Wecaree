@@ -1,10 +1,13 @@
 from django.shortcuts import render
 from django.http import HttpResponse
 from .models import bookingform
+from .models import hospitalreg
+from .models import doctorreg
+from .models import login
 # Create your views here.
 def home(re):
     try:
-        s=bookingform.objects.all()
+        s=hospitalreg.objects.all()
         # print(s)
     except:
         print('hai')
@@ -13,7 +16,7 @@ def home(re):
 def sundepart(re):
     x=re.POST.get('name')
     print(x,'xxxxxxxxxxx')
-    return render(re,'user/sunrisedepartments.html')
+    return render(re,'user/departments.html')
 
 def doctor(re):
     return render(re,'user/doctorslist.html')
@@ -30,14 +33,6 @@ def login(re):
 def signup(re):
     return render(re,'user/registration/signup.html')
 
-def amaladepart(re):
-    return render(re,'user/amaladepartments.html')
 
-def elitedepart(re):
-    return render(re,'user/elitedepartments.html')
-
-def jubiliedepart(re):
-    return render(re,'user/jubiliedepartments.html')
-
-def westfortdepart(re):
-    return render(re,'user/westfortdepartments.html')
+def new(re):
+    return render(re,'user/home.html')

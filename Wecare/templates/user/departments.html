@@ -3,7 +3,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>amala hospital departments</title>
+    <title>sunrise hospital  departments</title>
     <style>
         .mydiv{
             background-image:url("{% static 'images/wecarebg.jpg'%}");
@@ -93,15 +93,19 @@
 
 <div class="div2">
              <div class="div" >
-                 <h2><b>Amala Hospital</b></h2>
+                 <h2><b id="result"></b>Hospital</h2>
+                 <script>
+                     document.getElementById("result").innerHTML=localStorage.getItem("ddvalue");
+                 </script>
+
                   <label for="Specialization"><b>Select Department:</b></label>
                    <select id="Specialization" name="Specialization" >
                         <option value="branch">Departments</option>
-                        <option value="ortho">Orthopedics</option>
-                        <option value="cardio">Cardiology</option>
-                        <option value="dental">Dental</option>
-                        <option value="physio">Physiotherapy</option>
                         <option value="neuro">Neurology</option>
+                        <option value="cardio">Cardiology</option>
+                        <option value="pedia">Pediatrics</option>
+                        <option value="psycho">Psychiatry</option>
+                        <option value="derma">Dermatology</option>
 
                     </select>
              </div>
