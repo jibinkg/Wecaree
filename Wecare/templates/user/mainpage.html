@@ -69,7 +69,7 @@
          }
 
     </style>
-<!--  <script type="text/javascript">-->
+<!--   <script type="text/javascript">-->
 <!--			function onClick() {-->
 <!--				var select = document.getElementById('selected');-->
 <!--				console.log(select)-->
@@ -80,17 +80,6 @@
 
 <!--			onClick();-->
 <!--		</script>-->
-
-
-
-    <script>
-        function passval()
-        {
-           var selecttext=document.getElementById("Hospital").value;
-           localStorage.setItem("ddvalue",selecttext);
-           return true;
-        }
-    </script>
 </head>
 <body style="flex:1">
 <div class="mydiv">
@@ -106,26 +95,23 @@
             {% csrf_token %}
             <label for="Hospital"><b>Select Hospital:</b></label>
             <select id="Hospital" onChange="update()">
-                <option value="first">--Select Hospital--</option>
                 {% for i in data %}
 			    <option value={{i.Hname}}>{{i.Hname}}</option>
                 {% endfor %}
 		    </select>
 <!--		<input type="text" id="value" hidden>-->
-<!--		    <input type="text" id="text" name="name">-->
+		    <input type="text" id="text" name="name">
 
-<!--		    <script type="text/javascript">-->
-<!--                function update() {-->
-<!--                    var select = document.getElementById('Hospital');-->
-<!--                    var option = select.options[select.selectedIndex];-->
-<!---->
-<!--                    document.getElementById('value').value = option.value;-->
-<!--                    document.getElementById('text').value = option.text;-->
-<!--                }-->
-<!--&lt;!&ndash;                update();-->
+		    <script type="text/javascript">
+                function update() {
+                    var select = document.getElementById('Hospital');
+                    var option = select.options[select.selectedIndex];
+                    document.getElementById('text').value = option.text;
+                }
+                update();
 		    </script>
-            <input type="submit" value="ok" onclick="passval()">
-        </form>2
+            <input type="submit" value="ok" onclick="update()">
+        </form>
     </div>
 
 

@@ -15,8 +15,9 @@ def home(re):
 
 def sundepart(re):
     x=re.POST.get('name')
-    print(x,'xxxxxxxxxxx')
-    return render(re,'user/departments.html')
+    # print(x,'xxxxxxxxxxx')
+    s = hospitalreg.objects.filter(Hname=x)
+    return render(re,'user/departments.html',{'data':s})
 
 def doctor(re):
     return render(re,'user/doctorslist.html')
